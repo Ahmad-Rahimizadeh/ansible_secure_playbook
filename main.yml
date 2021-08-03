@@ -4,14 +4,14 @@ hosts: all
     - name: Flush existing firewall rules
       iptables:
         flush: true
-	
+
     - name: Firewall rule - allow all loopback traffic
       iptables:
         action: append
         chain: INPUT
         in_interface: lo
         jump: ACCEPT
-	
+
      - name: Firewall rule - allow established connections
        iptables:
          chain: INPUT
