@@ -14,7 +14,7 @@ hosts: all
 
      - name: Firewall rule - allow established connections
        iptables:
-         chain: INPUT
+	 chain: INPUT
 	 ctstate: ESTABLISHED,RELATED
 	 jump: ACCEPT
 
